@@ -49,7 +49,7 @@ def is_selinux_mls_enabled():
 
 def should_have_selinux():
     if platform.system() == "Linux" and os.path.isfile("/etc/selinux/config"):
-        if distro.id() not in ["ubuntu", "debian"]:
+        if distro.id() not in ["ubuntu", "debian", "fedora"]:
             return True
     return False
 
